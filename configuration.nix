@@ -108,9 +108,10 @@
       nixd
       kitty
       yazi
+      wl-clipboard
     ];
   };
-#dlasndn
+  #dlasndn
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -150,4 +151,3 @@
 
   system.stateVersion = "24.05";
 }
-

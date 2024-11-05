@@ -8,7 +8,7 @@
 
     globals.mapleader = " ";
     
-    colorschemes.onedark.enable = true;
+    colorschemes.gruvbox.enable = true;
     defaultEditor = true;
 
     opts = {
@@ -19,6 +19,27 @@
     };
 
     plugins = {
+      conform-nvim.enable = true;
+      lsp-format.enable = true;
+      lsp = {
+        enable = true;
+        servers = {
+          nixd = {
+            settings.formatting.command = [
+              "alejandra"
+            ];
+            enable = true;
+            extraOptions = {
+              nixos = {
+                expr = "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.nix-host.options";
+              };
+              home_manager = {
+                expr = "(builtins.getFlake \"/etc/nixos\").homeConfigurations.nix-host.options";
+              };
+            };
+          };
+        };
+      };
       lualine.enable = true;
       treesitter.enable = true;
       nvim-tree.enable = true;
