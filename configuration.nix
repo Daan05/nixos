@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  inputs,
   ...
 }: {
   imports = [
@@ -109,6 +108,9 @@
       kitty
       yazi
       wl-clipboard
+      qalculate-gtk
+      evince
+      writedisk
     ];
   };
   #dlasndn

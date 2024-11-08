@@ -7,7 +7,7 @@
     enable = true;
 
     globals.mapleader = " ";
-    
+
     colorschemes.gruvbox.enable = true;
     defaultEditor = true;
 
@@ -56,12 +56,12 @@
         };
       }
       {
-	action = "<cmd> Telescope find_files<CR>";
-	key = "<leader>f";
-	mode = "n";
-	options = {
-	  desc = "Find files using telescope";
-	};
+        action = "<cmd> Telescope find_files<CR>";
+        key = "<leader>f";
+        mode = "n";
+        options = {
+          desc = "Find files using telescope";
+        };
       }
     ];
   };
